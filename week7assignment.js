@@ -61,9 +61,9 @@ console.log(
 
 //step b: Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
 
-concatenatedNames = 0;
+concatenatedNames = " ";
 for (let i = 0; i < names.length; i++) {
-  concatenatedNames += names[i].concat;
+  concatenatedNames += names[i] + " ";
 }
 console.log("Step b: ", `concatenated names : ${concatenatedNames}`);
 
@@ -105,13 +105,18 @@ console.log(`The sum of all elements in the array : ${sum}`);
 console.log(`-------------------------- 
     Question 7: Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello')..`);
 
-//function concatenatedWord (word,n){
-// let n = number;
-// for (let i = 0, i < n; i++){
-//      concatenatedWord += word;
-//  }
-//  return concatenatedWord;
-//}
+function repeater(word, n) {
+  let concatenatedWord = "";
+
+  for (let i = 0; i < n; i++) {
+    concatenatedWord += word;
+  }
+  // return concatenatedWord;
+  console.log(concatenatedWord);
+}
+//examples
+repeater("taco", 4);
+repeater("Bonjour!", 5);
 
 console.log(`-------------------------- 
     Question 8: Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.`);
@@ -222,7 +227,6 @@ function buyNewCouch(budget, costOfCouch) {
     return "consider saving more or look for another option which is less expensive";
   }
 }
-console.log(buyNewCouch);
 
 //example 1
 let budget = 1500;
